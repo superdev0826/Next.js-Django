@@ -1,0 +1,15 @@
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "tests.settings"
+norecursedirs = ".git"
+django_find_project = false
+pythonpath = ["."]
+
+[tool.black]
+line-length = 120
+include = '\.pyi?$'
+exclude = '/\..+/'
+
+[tool.isort]
+profile = "black"
+line_length = 120
+skip_gitignore = true
